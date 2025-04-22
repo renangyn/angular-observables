@@ -9,6 +9,7 @@ import { interval } from 'rxjs';
 export class AppComponent implements OnInit{
   private destroyRef = inject(DestroyRef);
   ngOnInit(): void {    
+    // interval(1000).pipe(take(10)).subscribe
     const subscription = interval(1000).subscribe({
       next: (val) => console.log(val)
     });
